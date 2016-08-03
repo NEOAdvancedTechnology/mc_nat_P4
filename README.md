@@ -9,6 +9,7 @@ different IP DSTs to various switch output ports.
 
 Tables:
 output_port - sets the output port of the first multicast NAT output packet
+
 nat_table - sets the IP DST of new cloned packets as well as the
  destination port (of the next cloned packet)
 
