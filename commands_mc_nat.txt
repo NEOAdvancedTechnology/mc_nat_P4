@@ -1,8 +1,9 @@
-table_set default nat_table drop 
-table_add nat_table do_nat 239.1.1.1 => 239.2.2.2 250
-table_add nat_table do_nat 239.2.2.2 => 239.3.3.3 251
-table_add nat_table do_nat 239.3.3.3 => 239.4.4.4 252
-table_add nat_table do_nat 239.4.4.4 => 239.5.5.5 253
+table_set_default nat_table _drop 
+table_set_default output_port _drop
+table_add output_port set_output_port 239.1.1.1 => 1
+table_add nat_table do_nat 239.1.1.1 => 239.2.2.2 251
+table_add nat_table do_nat 239.2.2.2 => 239.3.3.3 252
+table_add nat_table do_nat 239.3.3.3 => 239.4.4.4 250
 mirroring_add 250 1
 mirroring_add 251 2
 mirroring_add 252 3
